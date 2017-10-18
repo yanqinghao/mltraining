@@ -12,3 +12,5 @@ print "\nMin max scaled data =", data_scaled
 
 data_normalized = preprocessing.normalize(data, norm='l1')
 print "\nL1 normalized data =", data_normalized
+
+print 1
