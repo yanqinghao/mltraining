@@ -10,7 +10,7 @@ def load_dataset(filename):
     file_reader = csv.reader(open(filename, 'rb'), delimiter=',')
     X, y = [], []
     for row in file_reader:
-        X.append(row[2:13])
+        X.append(row[2:16])
         y.append(row[-1])
     # Extract feature names
     feature_names = np.array(X[0])
