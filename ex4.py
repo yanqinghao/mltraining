@@ -24,7 +24,7 @@ num_training = int(0.9 * len(X))
 X_train, y_train = X[:num_training], y[:num_training]
 X_test, y_test = X[num_training:], y[num_training:]
 
-rf_regressor = RandomForestRegressor(n_estimators=1000, max_depth=10, min_samples_split=1.0)
+rf_regressor = RandomForestRegressor(n_estimators=1000, max_depth=10)
 rf_regressor.fit(X_train, y_train)
 
 y_pred = rf_regressor.predict(X_test)
