@@ -33,5 +33,5 @@ y = np.array([0, 0, 0, 1, 1, 1, 2, 2, 2])
 
 classifier = linear_model.LogisticRegression(solver='liblinear',C=100)
 classifier.fit(X, y)
-
-plot_classifier(classifier, X, y)
+if __name__ == '__main__':
+    plot_classifier(classifier, X, y)
