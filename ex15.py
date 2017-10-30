@@ -36,6 +36,7 @@ plt.figure()
 plt.clf()
 plt.imshow(predicted_labels, interpolation='nearest',extent=(x_values.min(), x_values.max(),
                                                              y_values.min(),y_values.max()),cmap=plt.cm.Paired,aspect='auto', origin='lower')
+# plt.pcolormesh(x_values, y_values, predicted_labels, cmap=plt.cm.Paired)
 plt.scatter(data[:,0], data[:,1], marker='o',facecolors='none', edgecolors='k', s=30)
 
 centroids = kmeans.cluster_centers_
