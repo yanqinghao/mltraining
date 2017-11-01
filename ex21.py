@@ -33,8 +33,7 @@ for eps in eps_grid:
         labels_best = labels
 # Plot silhouette scores vs epsilon
 plt.figure()
-plt.bar(eps_grid, silhouette_scores, width=0.05, color='k',
-align='center')
+plt.bar(eps_grid, silhouette_scores, width=0.05, color='k',align='center')
 plt.title('Silhouette score vs epsilon')
 # Best params
 print "\nBest epsilon =", eps_best
@@ -62,8 +61,7 @@ for cur_label, marker in zip(labels_uniq, markers):
     # Create mask for the current label
     cur_mask = (labels == cur_label)
     cur_data = X[cur_mask & mask_core]
-    plt.scatter(cur_data[:, 0], cur_data[:, 1], marker=marker,
-    edgecolors='black', s=96, facecolors='none')
+    plt.scatter(cur_data[:, 0], cur_data[:, 1], marker=marker,edgecolors='black', s=96, facecolors='none')
     cur_data = X[cur_mask & ~mask_core]
     plt.scatter(cur_data[:, 0], cur_data[:, 1], marker=marker,edgecolors='black', s=32)
 plt.title('Data separated into clusters')
