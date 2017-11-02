@@ -34,4 +34,3 @@ plt.axis('tight')
 plt.legend()
 plt.title('K Nearest Neighbors Regressor')
 plt.show()
-#111
