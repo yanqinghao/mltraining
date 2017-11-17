@@ -59,6 +59,7 @@ print "\nNew mean absolute error =", round(sm.mean_absolute_error(y_test, y_test
 
 ridge_regressor = linear_model.Ridge(alpha=0.1, fit_intercept=True, max_iter=10000)
 ridge_regressor.fit(X_train, y_train)
+
 y_test_pred_ridge = ridge_regressor.predict(X_test)
 print "Mean absolute error =", round(sm.mean_absolute_error(y_test, y_test_pred_ridge), 2)
 print "Mean squared error =", round(sm.mean_squared_error(y_test,y_test_pred_ridge), 2)
