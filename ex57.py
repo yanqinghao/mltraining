@@ -9,8 +9,7 @@ data = input_text[:, 0:2]
 labels = input_text[:, 2:]
 # Define a neural network with 2 layers:
 # 10 neurons in input layer and 4 neurons in output layer
-a = list(nl.tool.minmax(data))
-net = nl.net.newlvq([[0.9, 7.2], [0.8, 7.2]], 10, [0.25, 0.25, 0.25, 0.25])
+net = nl.net.newlvq(nl.tool.minmax(data), 10, [0.25, 0.25, 0.25, 0.25])
 # Train the neural network
 error = net.train(data, labels, epochs=100, goal=-1)
 # Create the input grid
